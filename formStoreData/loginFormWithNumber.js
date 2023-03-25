@@ -1,4 +1,6 @@
 var form = document.getElementById('addForm');
+var itemList = document.getElementById('items');
+console.log(itemList);
 //form submit Event
 form.addEventListener('submit', storeData);
 //Store Data:
@@ -14,6 +16,15 @@ function storeData(e) {
         phoneNumber: phoneNumber
     };
     var details = JSON.stringify(userDetail);
-    var userDetails = '{' + 'name' + ':' + name + ',' + 'email' + ':' + email + ',' + 'phonenumber' + ':' + phoneNumber + '}';
     localStorage.setItem(email, details);
+    var li = document.createElement('li');
+    //Add Class
+    li.className = 'list-group';
+
+    // Add text node with input value:
+    var list = '•' + name + '-' + email + '-' + phoneNumber;
+    console.log(list);
+    li.appendChild(document.createTextNode(list));
+
+    itemList.appendChild(li);
 }
