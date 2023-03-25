@@ -54,7 +54,7 @@ newDiv.appendChild(newDivText);
 console.log(newDiv);
 
 
-var parentNode = document.getElementById('items'); '
+var parentNode = document.getElementById('items');
 parentNode.innerHTML = '<li class="list-group-item">Item 1</li><li class="list-group-item">Item 2</li><li class="list-group-item">Item 3</li><li class="list-group-item">Item 4</li>';
 parentNode.innerHTML = '<li class="list-group-item">HEllo</li>' + parentNode.innerHTML;
 
